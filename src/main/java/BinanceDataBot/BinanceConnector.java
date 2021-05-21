@@ -35,11 +35,9 @@ public class BinanceConnector {
         BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance("MT7koIV4yarEUz94cZKmFxOWFnpxzZvElZO2AJ0PpK2UHVl27NWjRwYebLcFDLH6", "5XWhuPUJEUao7yykMfeQnkJmPYYLN6EE2aqZzpSy5ec7j5xCMrFP5EwoUONIhelb");
         BinanceApiRestClient restClient = factory.newRestClient();
         return restClient.getOrderBook(symbol.toUpperCase(), 10);
-
     }
 
     public List<AggTrade> getTradeSnapshot() {
-
         BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance("MT7koIV4yarEUz94cZKmFxOWFnpxzZvElZO2AJ0PpK2UHVl27NWjRwYebLcFDLH6", "5XWhuPUJEUao7yykMfeQnkJmPYYLN6EE2aqZzpSy5ec7j5xCMrFP5EwoUONIhelb");
         BinanceApiRestClient restClient = factory.newRestClient();
         return restClient.getAggTrades(this.symbol.toUpperCase());

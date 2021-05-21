@@ -59,6 +59,7 @@ public class AnalyticManager implements EventListener, Runnable {
         initializeCallback(2000);
         while (true) {
             try {
+                //What if we have two managers getting the data from the same queue?
                 handleEvent(this.eventManager.takeOrderBookQueue());
                 handleEvent(this.eventManager.takeScheduleQueue());
             } catch (InterruptedException e) {

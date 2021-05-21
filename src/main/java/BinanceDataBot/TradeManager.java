@@ -10,6 +10,11 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TradeManager {
     BinanceConnector binanceConnector;
     EventManager eventManager;
+
+    public Map<Long, AggTrade> getTradeCache() {
+        return tradeCache;
+    }
+
     private final Map<Long, AggTrade> tradeCache = new ConcurrentHashMap<>();
 
     public TradeManager(BinanceConnector binanceConnector, EventManager eventManager) {
